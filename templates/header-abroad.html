@@ -1,0 +1,36 @@
+<ul class="col link-list">
+    <li class="title text-uppercase">Countries </li>
+    {% for el in ab_nav %}
+                <li class="d-none d-sm-block"><a
+                href="{% url 'abroad-page' abroad_slug=el.ab.slug %}"
+                class="p-0">{{el.ab.name}}</a></li>
+                <li class="d-sm-none"><a
+                href="{% url 'abroad-page' abroad_slug=el.ab.slug %}"
+                class="p-0">{{el.ab.name}}</a></li>
+
+               
+        {% endfor %}
+
+
+    <!-- Bachelor of Arts -->
+    
+    
+    <!-- /Bachelor of Science -->
+</ul>
+<ul class="col link-list">
+    <li class="title text-uppercase">Popular Colleges </li>
+    
+    
+</ul>
+<!-- <ul class="col link-list">
+    <li class="title">Other pages</li>
+    <li><a href="#">Course Listing</a></li>
+    <li><a href="#">Course Listing Right</a></li>
+    <li><a href="#">Course Details</a></li>
+    <li><a href="#">Course Details Right</a></li>
+    <li><a href="#">Course Posts</a></li>
+        <li><a href="#">Edit Posts</a></li>
+    <li><a href="#">Course Posts2</a></li>
+        <li><a href="#">Edit Posts2</a></li>
+    <li><a href="#">Typography</a></li>
+</ul> -->
