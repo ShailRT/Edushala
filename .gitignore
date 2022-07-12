@@ -1,6 +1,5 @@
 # created by virtualenv automatically
-Lib/
-Scripts/
+*
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

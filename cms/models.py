@@ -50,14 +50,7 @@ class CollegeModel(models.Model):
         return self.name
 
 
-class Navbar(models.Model):
-    page_type = models.CharField(max_length=120)
-    col = models.OneToOneField(CollegeModel, on_delete=models.CASCADE, null=True, blank=True)
-    cr = models.OneToOneField(CourseModel, on_delete=models.CASCADE, null=True, blank=True)
-     
 
-    def __str__(self):
-        return self.page_type
 
     
 class AbroadModel(models.Model):
@@ -79,3 +72,13 @@ class AbroadModel(models.Model):
 
     def __str__(self):
         return self.name
+
+class Navbar(models.Model):
+    page_type = models.CharField(max_length=120)
+    col = models.OneToOneField(CollegeModel, on_delete=models.CASCADE, null=True, blank=True)
+    cr = models.OneToOneField(CourseModel, on_delete=models.CASCADE, null=True, blank=True)
+    ab = models.OneToOneField(AbroadModel, on_delete=models.CASCADE, null=True, blank=True)
+     
+
+    def __str__(self):
+        return self.page_type
